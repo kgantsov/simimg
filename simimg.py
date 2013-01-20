@@ -29,9 +29,11 @@ def get_distance(data1, data2):
 
 
 @baker.command(shortopts={"dirname": "d"})
-def find_similar(dirname):
+def find_similar(dirname='.'):
     '''
     Takes path to dir and find similar images.
+
+    :dirname: Directory name with images. Current directory by default.
     '''
     files = glob.glob(os.path.join(dirname, '*.jpg'))
     images = [(f, get_image_data(f)) for f in files]
