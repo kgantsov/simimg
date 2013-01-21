@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+from __future__ import absolute_import
+from __future__ import print_function
+from __future__ import division
+from __future__ import unicode_literals
+
 import glob
 import os
 
@@ -49,6 +54,6 @@ def find_similar(dirname='.'):
 
             if get_distance(data, data1) < DISTANCE:
                 similar_images[fname] = fname1
-                print 'Images %s and %s very similar.' % (fname, fname1)
+                print('Images %s and %s very similar.' % (fname, fname1))
 
 baker.run()
